@@ -1,0 +1,69 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Operator terminal banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#241454"/>
+      <stop offset="100%" stop-color="#130824"/>
+    </linearGradient>
+    <linearGradient id="marquee" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff6b4a"/>
+      <stop offset="60%" stop-color="#ffc94a"/>
+      <stop offset="100%" stop-color="#ff6b4a"/>
+    </linearGradient>
+    <clipPath id="cabinetClip">
+      <rect width="1200" height="300" rx="24"/>
+    </clipPath>
+    <clipPath id="reveal">
+      <rect id="revealRect" x="0" y="0" width="0" height="300"/>
+    </clipPath>
+    <pattern id="scanPattern" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#ffffff"/>
+    </pattern>
+    <filter id="blur1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <style>
+      .eyebrow{font-family:'Courier New',monospace;font-size:15px;letter-spacing:4px;fill:#170b33;opacity:0.75;font-weight:700;}
+      .title{font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:60px;fill:#f5f1ff;letter-spacing:1px;}
+      .subtitle{font-family:'Courier New',monospace;font-size:19px;fill:#2fe6ff;letter-spacing:1px;}
+      .chip-label{font-family:'Courier New',monospace;font-size:12px;fill:#b4a8de;letter-spacing:1px;}
+      .chip-value{font-family:'Courier New',monospace;font-size:13px;fill:#ffc94a;font-weight:700;}
+      .cursor{animation:blink 1.1s steps(1) infinite;}
+      @keyframes blink{0%,49%{opacity:1;}50%,100%{opacity:0;}}
+      #revealRect{animation:reveal 1.6s cubic-bezier(.2,.9,.3,1) forwards;}
+      @keyframes reveal{from{width:0;}to{width:1200px;}}
+      .scan{mix-blend-mode:overlay;opacity:0.05;}
+      .chipbox{fill:rgba(0,0,0,0.25);stroke:#4a2f8f;}
+    </style>
+  </defs>
+
+  <g clip-path="url(#cabinetClip)">
+    <rect width="1200" height="300" fill="url(#bg)"/>
+
+    <circle cx="1010" cy="70" r="140" fill="#2fe6ff" opacity="0.15" filter="url(#blur1)"/>
+    <circle cx="1120" cy="230" r="120" fill="#ff6b4a" opacity="0.12" filter="url(#blur1)"/>
+
+    <rect width="1200" height="54" fill="url(#marquee)"/>
+    <text x="40" y="34" class="eyebrow">OPERATOR TERMINAL // ONLINE</text>
+
+    <g clip-path="url(#reveal)">
+      <text x="38" y="150" class="title">GURSIMRAN SINGH</text>
+    </g>
+    <text x="40" y="188" class="subtitle">AI AUTOMATION OPERATOR // ALL DIGITAL SHOP CO<tspan class="cursor">_</tspan></text>
+
+    <g transform="translate(40,220)">
+      <rect class="chipbox" x="0" y="0" width="190" height="46" rx="8"/>
+      <text x="14" y="18" class="chip-label">RANK</text>
+      <text x="14" y="36" class="chip-value">ROOKIE OPERATOR</text>
+
+      <rect class="chipbox" x="206" y="0" width="150" height="46" rx="8"/>
+      <text x="220" y="18" class="chip-label">STATUS</text>
+      <text x="220" y="36" class="chip-value">SHIPPING</text>
+
+      <rect class="chipbox" x="372" y="0" width="170" height="46" rx="8"/>
+      <text x="386" y="18" class="chip-label">BUILD</text>
+      <text x="386" y="36" class="chip-value">AI AGENTS</text>
+    </g>
+
+    <rect class="scan" width="1200" height="300" fill="url(#scanPattern)"/>
+  </g>
+</svg>
