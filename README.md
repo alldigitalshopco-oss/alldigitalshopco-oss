@@ -13,7 +13,6 @@ Welcome to the command deck.
 
 - 🎮 Currently running **[Nexus Command Deck](https://nexus-arcade-memyselfandiiii.vercel.app)** — a gamified AI-ops control room (deploy agents, earn XP, level up, for real)
 - 🌐 Personal site in progress → **[personal-website](https://github.com/alldigitalshopco-oss/personal-website)**
-- 🧰 263-agent skill roster backed up at **[agency-skills-backup](https://github.com/alldigitalshopco-oss/agency-skills-backup)**
 - ⚡ Philosophy: jugaad-efficient — minimum wasted motion, maximum ship velocity
 - 🤖 Co-piloted by Claude Code
 
